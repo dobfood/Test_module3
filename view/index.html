@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<a href= "/create">Create</a>
+<table class="table table-bordered table-dark">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">NameCity</th>
+        <th scope="col">Nation</th>
+    </tr>
+    </thead>
+    {list-city}
+    </tbody>
+</table>
+<div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel" style="color: #0d6efd">Editing</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="/update" method="post">
+                        <div class="mb-3">
+                            <label for="recipient-id" class="col-form-label">ID:</label>
+                            <input type="text" class="form-control" id="recipient-id" name="id" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="recipient-nameCity" class="col-form-label"> nameCity:</label>
+                            <input type="text" class="form-control" id="recipient-nameCity" name="nameCity"
+                                   style="color: white">
+                        </div>
+                        <div class="mb-3">
+                            <label for="recipient-Nation" class="col-form-label">Nation:</label>
+                            <input type="text" class="form-control" id="recipient-Nation" name="Nation"
+                                   style="color: white">
+                        </div>
+                        <div class="mb-3">
+                            <label for="recipient-Area" class="col-form-label">Area:</label>
+                            <input type="text" class="form-control" id="recipient-Area" name="Area"
+                                   style="color: white">
+                        </div>
+                        <div class="mb-3">
+                            <label for="recipient-Population" class="col-form-label">Population:</label>
+                            <input type="text" class="form-control" id="recipient-Population" name="Population"
+                                   style="color: white">
+                        </div>
+                        <div class="mb-3">
+                            <label for="recipient-GDP" class="col-form-label">GDP:</label>
+                            <input type="text" class="form-control" id="recipient-GDP" name="GDP"
+                                   style="color: white">
+                        </div>
+                        <div class="mb-3">
+                            <label for="recipient-Describes" class="col-form-label">Describes:</label>
+                            <input type="text" class="form-control" id="recipient-Describes" name="Describes"
+                                   style="color: white">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                                    style="background-color: white;color: black">Close
+                            </button>
+                            <button type="submit" class="btn btn-primary"
+                                    style="background-color: #3574ff;border: #007bff">
+                                Confirm
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+</html>
